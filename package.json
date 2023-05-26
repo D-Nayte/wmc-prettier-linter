@@ -1,7 +1,8 @@
 {
   "type": "module",
   "scripts": {
-    "lint": "npx eslint  ."
+    "lint": "npx eslint  .",
+    "install-hooks": "node ./scripts/install-hooks.js"
   },
   "author": "",
   "license": "ISC",
