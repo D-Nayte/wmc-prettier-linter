@@ -1,0 +1,19 @@
+# Ignorierte Dateien und Ordner
+node_modules/
+dist/
+*.log
+.env
+
+# Ignorierte Dateien mit bestimmten Erweiterungen
+*.exe
+*.dll
+*.so
+
+# Ignorierte Dateien im Wurzelverzeichnis
+/*.txt
+
+# Ignorierte Dateien in einem bestimmten Verzeichnis
+build/*.tmp
+
+# Ignorierte Dateien in einem Verzeichnis und seinen Unterordnern
+logs/**/*.log
