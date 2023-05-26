@@ -1,11 +1,6 @@
 {
-  "name": "test",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "npx eslint  ."
   },
   "author": "",
@@ -25,9 +20,5 @@
     "eslint-plugin-react": "^7.32.2",
     "prettier": "2.8.8",
     "typescript": "^5.0.4"
-  },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
   }
 }

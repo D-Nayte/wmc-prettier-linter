@@ -17,3 +17,5 @@ build/*.tmp
 
 # Ignorierte Dateien in einem Verzeichnis und seinen Unterordnern
 logs/**/*.log
+
+package-lock.json
