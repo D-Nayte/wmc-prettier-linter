@@ -3,10 +3,7 @@
   "editor.codeActionsOnSave": {
     "source.fixAll": true
   },
-  "eslint.debug": true,
-  "workbench.colorCustomizations": {
-    "editorLineNumber.foreground": "#00ff00"
-  },
+
   "eslint.experimental.useFlatConfig": true,
   "eslint.rules.customizations": [{ "rule": "no-console", "severity": "off" }]
 }
