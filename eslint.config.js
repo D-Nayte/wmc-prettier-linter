@@ -58,7 +58,7 @@ export default [
       parser: tsParser,
       parserOptions: {
         ...ts.configs.base.parserOptions,
-        project: 'eslint.ts.json',
+        project: 'tsconfig.ts.json',
         ecmaVersion: 'latest',
       },
     },
@@ -77,7 +77,7 @@ export default [
       parser: tsParser,
       parserOptions: {
         ...ts.configs.base.parserOptions,
-        project: 'eslint.tsx.json',
+        project: 'tsconfig.tsx.json',
         ecmaVersion: 'latest',
       },
     },
