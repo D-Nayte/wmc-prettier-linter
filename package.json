@@ -1,10 +1,12 @@
 {
+  "author": "Andy Schunke",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "lint": "npx eslint  .",
-    "install-hooks": "node ./scripts/install-hooks.js"
+    "install-hooks": "node ./scripts/install-hooks.js",
+    "postinstall": "npm run install-hooks"
   },
-  "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/react": "^18.2.7",
