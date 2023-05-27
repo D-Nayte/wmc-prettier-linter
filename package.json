@@ -1,7 +1,7 @@
 {
   "name": "eslint-generall-v9",
   "author": "Andy Schunke",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "scripts": {
     "lint": "npx eslint  .",
