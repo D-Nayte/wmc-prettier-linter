@@ -11,6 +11,7 @@ const filesToCopy = [
   'react.settings.js',
   'tsconfig.ts.json',
   'tsconfig.tsx.json',
+  "ESLint.WMC.readme.md"
   // add more files to copy
 ];
 

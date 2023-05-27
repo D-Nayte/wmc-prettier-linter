@@ -1,7 +1,7 @@
 {
   "name": "wmc-eslint",
   "author": "Andy Schunke",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "scripts": {
     "lint": "npx eslint  .",
     "postinstall": "node ./scripts/_copy-files.js"
