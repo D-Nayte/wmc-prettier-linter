@@ -23,7 +23,7 @@ export default [
   },
 
   // Generall files wich dont to be linted
-  { ignores: ['*config.js', '*scripts/install-hooks.js'] },
+  { ignores: ['*config.js', '*scripts/_*'] },
 
   {
     files: ['*.js', '*.jsx'],
