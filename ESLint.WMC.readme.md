@@ -1,6 +1,6 @@
 # Install VS Code extensions
 - install ESLint for VS Code [here-->](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-- install Prettier for VS Code [here-->](https://vscode:extension/esbenp.prettier-vscode)
+- install Prettier for VS Code [here-->](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 
 or 
 
