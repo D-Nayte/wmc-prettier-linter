@@ -1,11 +1,10 @@
 {
   "name": "eslint-generall-v9",
   "author": "Andy Schunke",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "type": "module",
   "scripts": {
-    "lint": "npx eslint  .",
-    "copyFiles": "node ./scripts/_copy-files.js"
+    "lint": "npx eslint  ."
   },
   "license": "ISC",
   "dependencies": {
