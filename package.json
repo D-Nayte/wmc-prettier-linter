@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "lint": "npx eslint  .",
-    "copyFiles": "node ./scripts/_copy-files.js.js",
+    "copyFiles": "node ./scripts/_copy-files.js",
     "postinstall": "npm run copyFiles"
   },
   "license": "ISC",
