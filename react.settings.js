@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   react: {
     createClass: 'createReactClass', // Regex for Component Factory to use,
     // default to "createReactClass"

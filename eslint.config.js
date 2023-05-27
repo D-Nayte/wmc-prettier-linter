@@ -1,14 +1,14 @@
-import eslint from '@eslint/js';
-import ts from '@typescript-eslint/eslint-plugin';
-import tsParser from '@typescript-eslint/parser';
-import prettier from 'eslint-config-prettier';
-import pluginPrettier from 'eslint-plugin-prettier';
-import globals from 'globals';
-import react from 'eslint-plugin-react';
-import standartTypescript from 'eslint-config-standard-with-typescript';
-import reactSettings from './react.settings.js';
+const eslint = require('@eslint/js');
+const ts = require('@typescript-eslint/eslint-plugin');
+const tsParser = require('@typescript-eslint/parser');
+const prettier = require('eslint-config-prettier');
+const pluginPrettier = require('eslint-plugin-prettier');
+const globals = require('globals');
+const react = require('eslint-plugin-react');
+const standartTypescript = require('eslint-config-standard-with-typescript');
+const reactSettings = require('./react.settings.js');
 
-export default [
+module.exports = [
   //Default rules for all file fron ESLint
   eslint.configs.recommended,
 
@@ -22,11 +22,22 @@ export default [
     },
   },
 
-  // Generall files wich dont to be linted
-  { ignores: ['*config.js', '*scripts/_*'] },
-
+  // Generall rules, files wich will not be linted
   {
-    files: ['*.js', '*.jsx'],
+    ignores: [
+      '**/*config.js',
+      '**/*scripts/_*',
+      '**/*.next*',
+      '**/*page.js',
+      '**/*App.js',
+      '**/*index.js',
+      '**/*layout.js',
+    ],
+  },
+
+  //Errors if types definded in non-typescript files
+  {
+    files: ['**/*.js', '**/*.jsx'],
     rules: {
       'no-restricted-syntax': [
         'error',
@@ -50,7 +61,7 @@ export default [
 
   //Configurations for Typescript
   {
-    files: ['*.ts'],
+    files: ['**/*.ts'],
     plugins: {
       '@typescript-eslint': ts,
     },
@@ -67,7 +78,7 @@ export default [
 
   // Configurations for React with typescript
   {
-    files: ['*.tsx'],
+    files: ['**/*.tsx'],
     plugins: {
       react,
       '@typescript-eslint': ts,
@@ -90,7 +101,7 @@ export default [
 
   // Configuration for React
   {
-    files: ['*.jsx'],
+    files: ['**/*.jsx'],
     plugins: {
       react,
     },
