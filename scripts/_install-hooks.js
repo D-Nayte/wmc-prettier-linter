@@ -1,10 +1,18 @@
 import { execSync } from 'child_process';
 import path from 'path';
 import { existsSync, mkdirSync } from 'fs';
+import { fileURLToPath } from 'url';
 
-const hooksDir = path.join(process.cwd(), '.githooks');
-const preCommitFile = path.join(hooksDir, 'pre-commit');
-const gitHooksDir = path.join(process.cwd(), '.git/hooks');
+
+const copyFiles = ()=> {
+
+  const currentFilePath = fileURLToPath(import.meta.url);
+const currentDirectory = path.dirname(currentFilePath);
+const packagePath = path.dirname(currentDirectory);
+  
+  const hooksDir = path.join(packagePath, '.githooks');
+  const preCommitFile = path.join(hooksDir, 'pre-commit');
+const gitHooksDir = path.join(packagePath, '.git/hooks');
 const gitPreCommitFile = path.join(gitHooksDir, 'pre-commit');
 
 // Copying "pre-commit" file to .git/hooks with linux or windows command
@@ -22,3 +30,7 @@ try {
 } catch (error) {
   console.error('Failed to install hooks:', error);
 }
+}
+
+
+export default copyFiles

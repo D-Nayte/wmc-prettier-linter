@@ -5,11 +5,11 @@
   "type": "module",
   "scripts": {
     "lint": "npx eslint  .",
-    "install-hooks": "node ./scripts/install-hooks.js",
-    "postinstall": "npm run install-hooks"
+    "copyFiles": "node ./scripts/_copy-files.js.js",
+    "postinstall": "npm run copyFiles"
   },
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "@types/react": "^18.2.7",
     "@types/react-dom": "^18.2.4",
     "@typescript-eslint/eslint-plugin": "^5.59.7",
@@ -23,6 +23,7 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.32.2",
     "prettier": "2.8.8",
-    "typescript": "^5.0.4"
+    "typescript": "^5.0.4",
+    "fs-extra": "^11.1.1"
   }
 }
