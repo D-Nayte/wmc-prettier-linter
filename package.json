@@ -1,7 +1,7 @@
 {
   "name": "wmc-eslint",
   "author": "Andy Schunke",
-  "version": "1.0.30",
+  "version": "1.0.31",
   "bin": {
     "wmc-init": "./scripts/_copy-files"
   },
