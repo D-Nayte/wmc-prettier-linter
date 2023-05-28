@@ -1,17 +1,24 @@
 # Installation
 
-`npm install wmc-eslint`
+`npm install wmc-eslint -D`
 
 ---
 
-# Install VS Code extensions
+## Install VS Code extensions
 
 - install ESLint for VS Code [here-->](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-- install Prettier for VS Code [here-->](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 
-or
+  - formatting fixable ESLint errors on file save
+
+- install Prettier for VS Code [here-->](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+  - formatting code (e.g. indentation) on file save
+- install Pretty Typescript Errors for VS Code [here-->](https://marketplace.visualstudio.com/items?itemName=yoavbls.pretty-ts-errors)
+
+  - if using typescript, you get more readable Errors Information inside VS Code
+
+  or
 
 - MAC: `CMD + Shift + p`
 - WIN: `STRG + Shift + P`
 
-and enter `"Show Recommended Extensions"` to show a list of recommended extensions
+and enter `"Show Recommended Extensions"` to get a list of recommended extensions
