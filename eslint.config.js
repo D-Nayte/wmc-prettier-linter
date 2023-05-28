@@ -101,6 +101,7 @@ module.exports = [
       ...react.configs.recommended.rules,
       ...ts.configs.recommended.rules,
       ...standartTypescript.overrides[0].rules,
+      '@typescript-eslint/explicit-function-return-type': 'warn',
     },
   },
 
