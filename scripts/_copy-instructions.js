@@ -5,6 +5,9 @@ module.exports = () => {
   // Path to files to copy
   const filesToCopy = [
     'ESLint.WMC.instructions.md',
+    '.vscode',
+    'prettierrc.json',
+    'eslint.config.js',
     // add more files to copy
   ];
 

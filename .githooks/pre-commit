@@ -21,7 +21,7 @@ fi
 
 for FILE in $STAGED_FILES
 do
-  output="$($ESLINT --config ./wmc-eslint/eslint.config.js "$FILE")"
+  output="$($ESLINT "$FILE")"
 
   if [[ "$?" == 0 ]]; then
     echo "$(tput setaf 2)ESLint Passed: $FILE$(tput sgr0)"

@@ -5,6 +5,5 @@
   },
 
   "eslint.experimental.useFlatConfig": true,
-  "eslint.rules.customizations": [{ "rule": "no-console", "severity": "off" }],
-  "eslint.options": { "overrideConfigFile": "./wmc-eslint/eslint.config.js" }
+  "eslint.rules.customizations": [{ "rule": "no-console", "severity": "off" }]
 }

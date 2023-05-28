@@ -17,7 +17,7 @@ const scripts = [
   },
   {
     scriptName: 'wmcLint',
-    scriptCommand: 'eslint -c ./wmc-eslint/eslint.config.js .',
+    scriptCommand: 'eslint .',
   },
 ];
 

@@ -7,7 +7,11 @@ const pluginPrettier = require('eslint-plugin-prettier');
 const globals = require('globals');
 const react = require('eslint-plugin-react');
 const standartTypescript = require('eslint-config-standard-with-typescript');
-const reactSettings = require('./react.settings.js');
+const reactSettings = require('wmc-eslint/react.settings.js');
+const path = require('path');
+
+const pathToTsConfig = path.resolve('node_modules/wmc-eslint/tsconfig.ts.json');
+const pathToTsxConfig = path.resolve('node_modules/wmc-eslint/tsconfig.tsx.json');
 
 module.exports = [
   //Default rules for all file fron ESLint
@@ -70,7 +74,7 @@ module.exports = [
       parser: tsParser,
       parserOptions: {
         ...ts.configs.base.parserOptions,
-        project: 'wmc-eslint/tsconfig.ts.json',
+        project: pathToTsConfig,
         ecmaVersion: 'latest',
       },
     },
@@ -89,7 +93,7 @@ module.exports = [
       parser: tsParser,
       parserOptions: {
         ...ts.configs.base.parserOptions,
-        project: 'wmc-eslint/tsconfig.tsx.json',
+        project: pathToTsxConfig,
         ecmaVersion: 'latest',
       },
     },

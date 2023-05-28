@@ -24,8 +24,6 @@ const userInput = () => {
 const copyFiles = (useTypeScript) => {
   // Path to files to copy
   const filesToCopy = [
-    '.vscode',
-    'wmc-eslint',
     'tsconfig.json',
     'jsconfig.json',
     // add more files to copy

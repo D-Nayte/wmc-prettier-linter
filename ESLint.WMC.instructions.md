@@ -4,7 +4,7 @@
 
 - `npm run wmcInit`
 
-in your terminal to set up ESLint for your project.
+in your terminal and choose if you are using typescript or not to set up ESLint for your project.
 
 Now, your code is automatically checked and formatted while you write. Upon committing the code to GitHub, all modified files are rechecked. If any issues are found during the check, the code commit is aborted, and errors are reported.
 
@@ -20,3 +20,4 @@ in your terminal.
 
 - install ESLint for VS Code [here-->](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 - install Prettier for VS Code [here-->](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- install Pretty Typescript Errors for VS Code [here-->](https://marketplace.visualstudio.com/items?itemName=yoavbls.pretty-ts-errors)
