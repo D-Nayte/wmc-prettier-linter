@@ -1,3 +1,4 @@
+/* eslint-disable */
 const eslint = require('@eslint/js');
 const ts = require('@typescript-eslint/eslint-plugin');
 const tsParser = require('@typescript-eslint/parser');

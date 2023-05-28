@@ -15,3 +15,8 @@ Now, your code is automatically checked and formatted while you write. Upon comm
 - `npm run wmcLint`
 
 in your terminal.
+
+## You should also install recommended VS Code extensions
+
+- install ESLint for VS Code [here-->](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- install Prettier for VS Code [here-->](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)

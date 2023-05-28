@@ -1,3 +1,4 @@
+/* eslint-disable */
 module.exports = {
   react: {
     createClass: 'createReactClass', // Regex for Component Factory to use,

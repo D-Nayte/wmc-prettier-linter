@@ -1,3 +1,9 @@
+# Installation
+
+`npm install wmc-eslint`
+
+---
+
 # Install VS Code extensions
 
 - install ESLint for VS Code [here-->](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
