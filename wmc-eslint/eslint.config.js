@@ -35,6 +35,16 @@ module.exports = [
     ],
   },
 
+  //Generall rules for all Files
+  {
+    rules: {
+      eqeqeq: 'error',
+      'no-var': 'error',
+      'prefer-destructuring': ['error', { object: true, array: true }],
+      'no-console': ['error', { allow: ['warn', 'error'] }],
+    },
+  },
+
   //Errors if types definded in non-typescript files
   {
     files: ['**/*.js', '**/*.jsx'],
@@ -49,16 +59,6 @@ module.exports = [
     },
   },
 
-  //Generall rules for all Files
-  {
-    rules: {
-      eqeqeq: 'error',
-      'no-var': 'error',
-      'prefer-destructuring': ['error', { object: true, array: true }],
-      'no-console': ['error', { allow: ['warn', 'error'] }],
-    },
-  },
-
   //Configurations for Typescript
   {
     files: ['**/*.ts'],
@@ -69,7 +69,7 @@ module.exports = [
       parser: tsParser,
       parserOptions: {
         ...ts.configs.base.parserOptions,
-        project: 'tsconfig.ts.json',
+        project: 'wmc-eslint/tsconfig.ts.json',
         ecmaVersion: 'latest',
       },
     },
@@ -88,7 +88,7 @@ module.exports = [
       parser: tsParser,
       parserOptions: {
         ...ts.configs.base.parserOptions,
-        project: 'tsconfig.tsx.json',
+        project: 'wmc-eslint/tsconfig.tsx.json',
         ecmaVersion: 'latest',
       },
     },

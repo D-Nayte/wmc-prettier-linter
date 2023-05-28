@@ -1,0 +1,60 @@
+#!/usr/bin/env node
+
+const fs = require('fs-extra');
+const path = require('path');
+const install_hooks = require('./_install-hooks.js');
+const readline = require('readline');
+
+const userInput = () => {
+  // Create readline interface
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+  });
+
+  // Prompt user for TypeScript decision
+  rl.question('Use TypeScript for the configuration files? (yes/no): ', (answer) => {
+    rl.close();
+
+    const useTypeScript = answer.toLowerCase() === 'yes' || answer.toLowerCase() === 'y';
+    copyFiles(useTypeScript);
+  });
+};
+
+const copyFiles = (useTypeScript) => {
+  // Path to files to copy
+  const filesToCopy = [
+    '.vscode',
+    'wmc-eslint',
+    'tsconfig.json',
+    'jsconfig.json',
+    // add more files to copy
+  ];
+
+  const currentFilePath = __filename;
+  const currentDirectory = path.dirname(currentFilePath);
+  const packagePath = path.dirname(currentDirectory);
+  const root = path.resolve(packagePath, '..', '..');
+
+  const fileExists = (file) => {
+    const filePatch = path.join(root, file);
+    const fileExists = fs.existsSync(filePatch);
+    return fileExists;
+  };
+
+  //Copy files into root folder of project
+  filesToCopy.forEach((file) => {
+    const sourcePath = path.join(packagePath, file);
+    let destinationPath = path.join(root, file);
+
+    //if typescript file already exists or its not a typescript project, dont copy "tsconfig.json"
+    if ((file === 'tsconfig.json' && !useTypeScript) || fileExists(file)) return;
+    if ((file === 'jsconfig.json' && useTypeScript) || fileExists(file)) return;
+
+    fs.copySync(sourcePath, destinationPath);
+  });
+  install_hooks();
+  console.log('Assets successfully copy to root dir.');
+};
+
+userInput();

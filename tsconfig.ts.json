@@ -1,5 +1,0 @@
-{
-  "extends": "./config.json",
-  "include": ["*.ts"],
-  "exlude": ["*.tsx"]
-}

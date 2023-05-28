@@ -1,10 +1,12 @@
 {
   "name": "wmc-eslint",
   "author": "Andy Schunke",
-  "version": "1.0.2",
+  "version": "1.0.18",
+  "bin": {
+    "wmc-init": "./scripts/_copy-files"
+  },
   "scripts": {
-    "lint": "npx eslint  .",
-    "postinstall": "node ./scripts/_copy-files.js"
+    "postinstall": "node ./scripts/_init.js"
   },
   "license": "ISC",
   "dependencies": {
