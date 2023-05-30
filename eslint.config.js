@@ -1,6 +1,7 @@
 /* eslint-disable */
 const eslint = require('@eslint/js');
 const ts = require('@typescript-eslint/eslint-plugin');
+const JsJsxRule = require('wmc-eslint/eslint-rule-jsx.js');
 const tsParser = require('@typescript-eslint/parser');
 const prettier = require('eslint-config-prettier');
 const pluginPrettier = require('eslint-plugin-prettier');
@@ -61,6 +62,23 @@ module.exports = [
           message: 'TypeScript types are not allowed in JavaScript files.',
         },
       ],
+    },
+  },
+
+  {
+    files: ['**/*.js'],
+    plugins: {
+      JsJsxRule,
+    },
+    languageOptions: {
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+    },
+    rules: {
+      'JsJsxRule/react-file-extension': 'error',
     },
   },
 
