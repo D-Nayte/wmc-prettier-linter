@@ -1,12 +1,12 @@
-# Initialize package for usage
+# Install git pre-commit hook for ESLint and Prettier
 
-You have to initialize ESLint for your project just once. To do so, type
+If you want to abort the commit if there are any errors, you can install a pre-commit hook that will run ESLint and Prettier before each commit.
 
-- `npm run wmcInit`
+- `npm run wmc-hook-install`
 
-in your terminal and choose if you are using typescript or not to set up ESLint for your project.
+You can also uninstall the hook by typing:
 
-Now, your code is automatically checked while you write and formatted after save `(recommended extensions needed)`. Upon committing the code to GitHub, all modified files are rechecked. If any issues are found during the check, the code commit is aborted, and errors are reported.
+- `npm run wmc-hook-delete`
 
 ## ATTENTION!
 
@@ -16,15 +16,17 @@ If you still wanto to commit with errors, use
 
 ---
 
+Now, your code is automatically checked while you write and formatted after save `(recommended extensions needed)`. Upon committing the code to GitHub, all modified files are rechecked. If any issues are found during the check, the code commit is aborted, and errors are reported.
+
 ## Lint and Fix
 
 You can also manually check your code by entering:
 
-- `npm run wmcLint`
+- `npm run wmc-lint`
 
 or autofix your code by typing:
 
-- `npx wmcLint . --fix`
+- `npm run wmc-fix`
 
 in your terminal.
 

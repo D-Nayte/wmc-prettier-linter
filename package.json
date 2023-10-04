@@ -1,9 +1,10 @@
 {
   "name": "wmc-eslint",
   "author": "Andy Schunke",
-  "version": "1.0.35",
+  "version": "1.0.57",
   "bin": {
-    "wmc-init": "./scripts/_copy-files"
+    "wmc-init": "./scripts/_copy-files",
+    "wmc-hook": "./scripts/_install-hooks"
   },
   "scripts": {
     "postinstall": "node ./scripts/_init.js"
@@ -24,6 +25,7 @@
     "eslint-plugin-react": "^7.32.2",
     "fs-extra": "^11.1.1",
     "prettier": "2.8.8",
+    "prompts": "^2.4.2",
     "typescript": "^5.0.4"
   }
 }
