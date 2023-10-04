@@ -11,10 +11,7 @@ const standartTypescript = require("eslint-config-standard-with-typescript");
 const reactSettings = require("wmc-eslint/react.settings.js");
 const path = require("path");
 
-const pathToTsConfig = path.resolve("node_modules/wmc-eslint/tsconfig.ts.json");
-const pathToTsxConfig = path.resolve(
-  "node_modules/wmc-eslint/tsconfig.tsx.json"
-);
+const pathToTsConfig = path.resolve("./tsconfig.json");
 
 module.exports = [
   //Default rules for all file fron ESLint
@@ -93,6 +90,10 @@ module.exports = [
     rules: {
       ...ts.configs.recommended.rules,
       ...standartTypescript.overrides[0].rules,
+      "@typescript-eslint/triple-slash-reference": [
+        "error",
+        { path: "always", types: "always", lib: "always" },
+      ],
     },
   },
 
@@ -108,7 +109,7 @@ module.exports = [
       parser: tsParser,
       parserOptions: {
         ...ts.configs.base.parserOptions,
-        project: pathToTsxConfig,
+        project: pathToTsConfig,
         ecmaVersion: "latest",
       },
     },
@@ -118,6 +119,10 @@ module.exports = [
       ...standartTypescript.overrides[0].rules,
       "@typescript-eslint/explicit-function-return-type": "warn",
       "react/react-in-jsx-scope": "off",
+      "@typescript-eslint/triple-slash-reference": [
+        "error",
+        { path: "always", types: "always", lib: "always" },
+      ],
     },
   },
 

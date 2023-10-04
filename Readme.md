@@ -26,7 +26,9 @@ You can also uninstall the hook by typing:
 
 ## ATTENTION!
 
-If you still want to commit with errors, use
+If you have just warnings, the commit will be successful.
+
+If you want to commit with errors, use
 
 - `git commit --no-verify`
 
