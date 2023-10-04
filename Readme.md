@@ -1,3 +1,7 @@
+# Overview
+
+### This project uses ESLint and Prettier to ensure a consistent code style. ESLint is a linter that will analyze your code and report any errors. Prettier is a code formatter that will ensure that your code is formatted consistently. The combination of these two tools will ensure that your code is both well-written and well-formatted across your entire team.
+
 # Prerequisites
 
 - Node.js >= 18.0.0
@@ -12,7 +16,7 @@ Be shure you are in the root directory of your project.
 
 Install the package with:
 
-`npm install wmc-eslint -D`
+`npm install wmc-prettier-linter -D`
 
 # Hook Installation
 
@@ -66,7 +70,9 @@ or
   - formatting fixable ESLint errors on file save
 
 - install Prettier for VS Code [here-->](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+
   - formatting code (e.g. indentation) on file save
-- install Pretty Typescript Errors for VS Code [here-->](https://marketplace.visualstudio.com/items?itemName=yoavbls.pretty-ts-errors)
+
+- (optionally) install Pretty Typescript Errors for VS Code [here-->](https://marketplace.visualstudio.com/items?itemName=yoavbls.pretty-ts-errors)
 
   - if using typescript, you get more readable Errors Information inside VS Code
