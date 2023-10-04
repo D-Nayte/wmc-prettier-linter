@@ -1,3 +1,5 @@
+# ----- Development still in progress, not recommended for use -----
+
 # Installation
 
 `npm install wmc-eslint -D`
