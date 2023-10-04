@@ -27,6 +27,10 @@ const scripts = [
     scriptName: "wmc-fix",
     scriptCommand: "npx eslint . --fix",
   },
+  {
+    scriptName: "wmc-format",
+    scriptCommand: "npx prettier --write .",
+  },
 ];
 
 // Read the package.json of the Next.js project

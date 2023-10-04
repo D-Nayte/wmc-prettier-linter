@@ -4,7 +4,6 @@ const path = require("path");
 module.exports = () => {
   // Path to files to copy
   const filesToCopy = [
-    "ESLint.WMC.instructions.md",
     ".vscode",
     ".prettierrc",
     "eslint.config.js",
