@@ -1,18 +1,20 @@
 /* eslint-disable */
-const eslint = require('@eslint/js');
-const ts = require('@typescript-eslint/eslint-plugin');
-const JsJsxRule = require('wmc-eslint/eslint-rule-jsx.js');
-const tsParser = require('@typescript-eslint/parser');
-const prettier = require('eslint-config-prettier');
-const pluginPrettier = require('eslint-plugin-prettier');
-const globals = require('globals');
-const react = require('eslint-plugin-react');
-const standartTypescript = require('eslint-config-standard-with-typescript');
-const reactSettings = require('wmc-eslint/react.settings.js');
-const path = require('path');
+const eslint = require("@eslint/js");
+const ts = require("@typescript-eslint/eslint-plugin");
+const JsJsxRule = require("wmc-eslint/eslint-rule-jsx.js");
+const tsParser = require("@typescript-eslint/parser");
+const prettier = require("eslint-config-prettier");
+const pluginPrettier = require("eslint-plugin-prettier");
+const globals = require("globals");
+const react = require("eslint-plugin-react");
+const standartTypescript = require("eslint-config-standard-with-typescript");
+const reactSettings = require("wmc-eslint/react.settings.js");
+const path = require("path");
 
-const pathToTsConfig = path.resolve('node_modules/wmc-eslint/tsconfig.ts.json');
-const pathToTsxConfig = path.resolve('node_modules/wmc-eslint/tsconfig.tsx.json');
+const pathToTsConfig = path.resolve("node_modules/wmc-eslint/tsconfig.ts.json");
+const pathToTsxConfig = path.resolve(
+  "node_modules/wmc-eslint/tsconfig.tsx.json"
+);
 
 module.exports = [
   //Default rules for all file fron ESLint
@@ -30,43 +32,35 @@ module.exports = [
 
   // Generall rules, files wich will not be linted
   {
-    ignores: [
-      '**/*config.js',
-      '**/*scripts/_*',
-      '**/*.next*',
-      '**/*page.js',
-      '**/*App.js',
-      '**/*index.js',
-      '**/*layout.js',
-    ],
+    ignores: ["**/*config.js", "**/*scripts/_*", "**/*.next*", "**/*App.js"],
   },
 
   //Generall rules for all Files
   {
     rules: {
-      eqeqeq: 'error',
-      'no-var': 'error',
-      'prefer-destructuring': ['error', { object: true, array: true }],
-      'no-console': ['error', { allow: ['warn', 'error'] }],
+      "eqeqeq": "error",
+      "no-var": "error",
+      "prefer-destructuring": ["error", { object: true, array: true }],
+      "no-console": ["error", { allow: ["warn", "error"] }],
     },
   },
 
   //Errors if types definded in non-typescript files
   {
-    files: ['**/*.js', '**/*.jsx'],
+    files: ["**/*.js", "**/*.jsx"],
     rules: {
-      'no-restricted-syntax': [
-        'error',
+      "no-restricted-syntax": [
+        "error",
         {
-          selector: 'TSTypeAnnotation',
-          message: 'TypeScript types are not allowed in JavaScript files.',
+          selector: "TSTypeAnnotation",
+          message: "TypeScript types are not allowed in JavaScript files.",
         },
       ],
     },
   },
 
   {
-    files: ['**/*.js'],
+    files: ["**/*.js"],
     plugins: {
       JsJsxRule,
     },
@@ -78,54 +72,58 @@ module.exports = [
       },
     },
     rules: {
-      'JsJsxRule/react-file-extension': 'error',
+      "JsJsxRule/react-file-extension": "error",
     },
   },
 
   //Configurations for Typescript
   {
-    files: ['**/*.ts'],
+    files: ["**/*.ts"],
     plugins: {
-      '@typescript-eslint': ts,
+      "@typescript-eslint": ts,
     },
     languageOptions: {
       parser: tsParser,
       parserOptions: {
         ...ts.configs.base.parserOptions,
         project: pathToTsConfig,
-        ecmaVersion: 'latest',
+        ecmaVersion: "latest",
       },
     },
-    rules: { ...ts.configs.recommended.rules, ...standartTypescript.overrides[0].rules },
+    rules: {
+      ...ts.configs.recommended.rules,
+      ...standartTypescript.overrides[0].rules,
+    },
   },
 
   // Configurations for React with typescript
   {
-    files: ['**/*.tsx'],
+    files: ["**/*.tsx"],
     plugins: {
       react,
-      '@typescript-eslint': ts,
-      'standard-with-typescript': standartTypescript,
+      "@typescript-eslint": ts,
+      "standard-with-typescript": standartTypescript,
     },
     languageOptions: {
       parser: tsParser,
       parserOptions: {
         ...ts.configs.base.parserOptions,
         project: pathToTsxConfig,
-        ecmaVersion: 'latest',
+        ecmaVersion: "latest",
       },
     },
     rules: {
       ...react.configs.recommended.rules,
       ...ts.configs.recommended.rules,
       ...standartTypescript.overrides[0].rules,
-      '@typescript-eslint/explicit-function-return-type': 'warn',
+      "@typescript-eslint/explicit-function-return-type": "warn",
+      "react/react-in-jsx-scope": "off",
     },
   },
 
   // Configuration for React
   {
-    files: ['**/*.jsx'],
+    files: ["**/*.jsx"],
     plugins: {
       react,
     },
@@ -137,6 +135,7 @@ module.exports = [
     },
     rules: {
       ...react.configs.recommended.rules,
+      "react/react-in-jsx-scope": "off",
     },
   },
 
@@ -149,7 +148,6 @@ module.exports = [
       pluginPrettier,
     },
     languageOptions: {},
-    // rules: { 'pluginPrettier/prettier': 'error' },
   },
 
   //Settings shared across ESSLint rules

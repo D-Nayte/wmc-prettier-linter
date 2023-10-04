@@ -24,7 +24,7 @@ You can also manually check your code by entering:
 
 or autofix your code by typing:
 
-- `npx eslint . --fix`
+- `npx wmcLint . --fix`
 
 in your terminal.
 
