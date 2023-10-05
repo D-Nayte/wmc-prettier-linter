@@ -1,7 +1,11 @@
 {
   "name": "wmc-prettier-linter",
   "author": "Andy Schunke",
-  "version": "0.1.02",
+  "version": "0.1.03",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/D-Nayte/wmc-prettier-linter"
+  },
   "bin": {
     "wmc-init": "./scripts/_copy-files",
     "wmc-hook": "./scripts/_install-hooks"
