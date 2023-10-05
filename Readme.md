@@ -52,7 +52,7 @@ or autofix your code by typing:
 
 in your terminal.
 
-To fromat your code (if oyu are not using VS Code) type:
+To fromat your code (if you are not using VS Code) type:
 
 - `npm run wmc-format`
 
